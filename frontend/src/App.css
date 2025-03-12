@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+    45deg,
+    #ff9a9e,
+    #fad0c4,
+    #ffdde1,
+    #a18cd1,
+    #fbc2eb
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Chat Container */
+.chat-container {
+  width: 100%;
+  max-width: 600px; /* Adjusted for proper layout */
+  height: 90vh;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Title */
+.chat-title {
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Chat Box */
+.chat-box {
+  flex-grow: 1; /* Allows it to expand properly */
+  overflow-y: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  resize: vertical; /* Allows only height resizing */
+  min-height: 300px;
+  max-height: 80vh;
+}
+
+/* Chat Messages */
+.message {
+  max-width: 75%;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 10px;
+  word-wrap: break-word; /* Ensures long words don't break the layout */
+}
+
+/* User Message */
+.user-message {
+  background: #4caf50;
+  color: white;
+  align-self: flex-end;
+  text-align: right;
+}
+
+/* Bot Message */
+.bot-message {
+  background: #2196f3;
+  color: white;
+  align-self: flex-start;
+}
+
+/* Chat Input Box */
+.chat-input-box {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Chat Input */
+.chat-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* Send Button */
+.chat-send-btn {
+  padding: 12px 20px;
+  background-color: #ff5722;
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chat-send-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Scrollable Chat */
+.chat-box::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .chat-container {
+    width: 95%;
+    height: 95vh;
+  }
+
+  .chat-box {
+    max-height: 60vh;
+  }
+
+  .chat-input {
+    font-size: 14px;
+  }
+
+  .chat-send-btn {
+    padding: 10px 15px;
+  }
+}
+
+.result-image {
+  display: flex;
+  width: 200px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: cover; /* Ensures it maintains aspect ratio and fills */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  margin-top: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.result-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  background-color: white; /* Adds padding around the image */
+}
+.message {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers everything inside */
+}
+.result-image {
+  display: block;
+  margin: 10px auto; /* Centers horizontally */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
